@@ -1,4 +1,4 @@
-REM Free Money.
+REM Stop Network Traffic
 REM Seconds: 7.95
 DELAY 1000
 GUI r
